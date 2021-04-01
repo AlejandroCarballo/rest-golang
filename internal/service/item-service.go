@@ -1,6 +1,6 @@
 package service
 
-import "github.com/juanpablopizarro/ejemplo/internal/models"
+import "github.com/AlejandroCarballo/ejemplo/internal/models"
 
 // ItemService ...
 type ItemService interface {
