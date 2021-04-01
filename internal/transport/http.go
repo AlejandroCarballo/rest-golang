@@ -3,7 +3,7 @@ package transport
 import (
 	"net/http"
 
-	"github.com/juanpablopizarro/ejemplo/internal/service"
+	"github.com/AlejandroCarballo/ejemplo/internal/service"
 	"github.com/labstack/echo"
 )
 

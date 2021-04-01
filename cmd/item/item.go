@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/juanpablopizarro/ejemplo/internal/service"
-	"github.com/juanpablopizarro/ejemplo/internal/transport"
+	"github.com/AlejandroCarballo/ejemplo/internal/service"
+	"github.com/AlejandroCarballo/ejemplo/internal/transport"
 )
 
 func main() {
