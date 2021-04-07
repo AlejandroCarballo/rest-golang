@@ -18,12 +18,21 @@ type httpTransport struct {
 
 func NewHTTP(is service.ItemService) HTTPTransport {
 	e := echo.New()
-	e.GET("/", runHelloWold)
+	e.GET("/items/:id", getItems)
+	e.POST("/users", saveItem)
 	return &httpTransport{is, e}
 }
 
-func runHelloWold(c echo.Context) error {
-	return c.String(http.StatusOK, "Hello, World!")
+func getItems(c echo.Context) error {
+	item := c.Param("id")
+	return c.String(http.StatusOK, item)
+
+}
+
+func saveItem(c echo.Context) error {
+	item := c.FormValue("item")
+	description := c.FormValue("description")
+	return c.String(http.StatusOK, "item:"+item+", description:"+description)
 }
 
 func (ht *httpTransport) Run() error {
